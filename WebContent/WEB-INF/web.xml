@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Vacation Rental</display-name>
+  <welcome-file-list>
+    <welcome-file>index</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>freemarker</servlet-name>
+    <servlet-class>freemarker.ext.servlet.FreemarkerServlet</servlet-class>
+    <init-param>
+      <param-name>TemplatePath</param-name>
+      <param-value>/</param-value>
+    </init-param>
+    <init-param>
+      <param-name>NoCache</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <init-param>
+      <param-name>ContentType</param-name>
+      <param-value>text/html; charset=UTF-8</param-value>
+    </init-param>
+    <init-param>
+      <param-name>template_update_delay</param-name>
+      <param-value>0</param-value>
+    </init-param>
+    <init-param>
+      <param-name>default_encoding</param-name>
+      <param-value>ISO-8859-1</param-value>
+    </init-param>
+    <init-param>
+      <param-name>number_format</param-name>
+      <param-value>0.##########</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/error404</location>
+  </error-page>
+  <servlet-mapping>
+    <servlet-name>freemarker</servlet-name>
+    <url-pattern>*.ftl</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>welcome_servlet</servlet-name>
+    <servlet-class>servlets.WelcomeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>welcome_servlet</servlet-name>
+    <url-pattern>/index</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>guest_servlet</servlet-name>
+    <servlet-class>servlets.GuestGUI</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>guest_servlet</servlet-name>
+    <url-pattern>/guestgui</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>staffmember_servlet</servlet-name>
+    <servlet-class>servlets.StaffmemberGUI</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>staffmember_servlet</servlet-name>
+    <url-pattern>/staffmembergui</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>error404_servlet</servlet-name>
+    <servlet-class>servlets.Error404Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>error404_servlet</servlet-name>
+    <url-pattern>/error404</url-pattern>
+  </servlet-mapping>
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>FreeMarker MVC Views</web-resource-name>
+      <url-pattern>*.ftl</url-pattern>
+    </web-resource-collection>
+    <auth-constraint/>
+  </security-constraint>
+</web-app>

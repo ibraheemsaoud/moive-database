@@ -1,0 +1,148 @@
+body, html {
+	background-color: #fee8ad;
+	font-size: 12px;
+	color: #000000;
+	text-align: center;
+	padding: 0px;
+	margin: 0px;
+	height: 100%;
+}
+
+a:link, a:visited, a:active {
+	color: #000000;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000000;
+	text-decoration: underline;
+}
+
+#wrapper {
+	margin: 0px auto;
+	width: 70%;
+	height: 100%;
+	vertical-align: top;
+	background-color: #ffffff;
+}
+
+#copyright {
+	text-align: center;
+	width: 100%;
+	margin: 10px 2px 0 0;
+}
+
+#content {
+	width: 70%;
+	margin: 0px auto;
+	background-color: #ffffff;
+}
+
+#logo {
+	background: #ffffff url('../images/unilogo.png') no-repeat left top;
+	background-size: auto 70px;
+	width: 100%;
+	height: 57px;
+	margin: 0px auto;
+	text-align: center;
+	padding-top: 15px;
+	font-size: 20px;
+	color: #304d90;
+	font-weight: bold;
+}
+
+table, th, td {
+	border: 1px solid #000000;
+	width: 70%;
+	margin: 0px auto;
+	padding: 0px;
+	border-collapse: collapse;
+}
+
+th {
+	background-color: #b9b9b9;
+	width: 25%;
+	text-align: center;
+}
+
+td {
+	width: 25%;
+}
+
+.error {
+	font-size: 15px;
+	color: red;
+	font-weight: bold;
+	text-align: center;
+	margin: 0px auto;
+}
+
+.success {
+	font-size: 15px;
+	color: green;
+	font-weight: bold;
+	text-align: center;
+	margin: 0px auto;
+}
+
+ul#navigation {
+	list-style: none;
+	margin: 10px auto;
+	border-bottom: 1px dashed #fee8ad;
+	border-top: 1px dashed #fee8ad;
+	font-weight: bold;
+}
+
+ul#navigation li {
+	border-radius: 25px;
+	background: #fee8ad;
+	padding: 3px 10px;
+	display: inline;
+}
+
+ul#navigation li:hover {
+	border-radius: 25px;
+	background: #cfba81;
+	padding: 3px 10px;
+	display: inline;
+}
+
+ul#navigation li a {
+	color: #000000;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+ul#navigation li ul {
+	display: none;
+}
+
+ul#navigation li ul li {
+	display: block;
+}
+
+ul#navigation li:hover ul {
+	display: block;
+}
+
+#insertoffer {
+	width: 70%;
+	padding: 0px;
+	margin: auto;
+	border: 1px #000000 dashed;
+}
+
+#insertoffer label {
+	display: inline-block;
+	width: 15%;
+	text-align: left;
+}
+
+#insertoffer input {
+	width: 30%;
+	text-align: left;
+}
+
+button#submit {
+	margin: 5px auto;
+}
